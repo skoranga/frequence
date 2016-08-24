@@ -15,7 +15,7 @@ function Frequence(data, options) {
             data = data.join(' ');
         }
         if (!keepSpecialChars) {
-            data = data.replace(/[^0-9a-zA-Z_ ]/g, '');
+            data = data.replace(/[^0-9a-zA-Z ]/g, '');
         }
         if (!caseSensitive) {
             data = data.toLowerCase();

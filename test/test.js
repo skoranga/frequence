@@ -2,6 +2,7 @@
 
 const Assert = require('assert');
 const Frequence = require('../');
+const Fs = require('fs');
 
 describe('frequence', () => {
 
@@ -33,5 +34,13 @@ describe('frequence', () => {
         let result = Frequence.letters('hello world');
         Assert.ok(result);
         Assert.equal(Object.keys(result).length, 7);
+    });
+
+
+    it('read words from file', () => {
+        let data = Fs.readFileSync(__dirname + '/dump.txt', {encoding: 'utf-8'});
+        let result = Frequence.letters(data);
+        Assert.ok(result);
+        Assert.equal(Object.keys(result).length, 36);
     });
 });
