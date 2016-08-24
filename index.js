@@ -8,7 +8,7 @@ function Frequence(data, options) {
     let type = options.type || 'word';  //letter|word
 
     let buckets = [];
-    let dictionary = {};
+    let dictionary = [];
 
     if (data) {
         if (Array.isArray(data)) {
@@ -18,7 +18,7 @@ function Frequence(data, options) {
             data = data.replace(/[^0-9a-zA-Z_ ]/g, '');
         }
         if (!caseSensitive) {
-            data = data.toUpperCase();
+            data = data.toLowerCase();
         }
         switch (type) {
             case 'word':
@@ -30,9 +30,16 @@ function Frequence(data, options) {
                 buckets = data.split('');
                 break;
         }
+        let dictMap = {};
         buckets.forEach((token) => {
-            dictionary[token] = dictionary[token] || 0;
-            dictionary[token]++;
+            dictMap[token] = dictMap[token] || 0;
+            dictMap[token]++;
+        });
+        Object.keys(dictMap).sort().forEach((key) => {
+            dictionary.push({
+                key,
+                count: dictMap[key]
+            })
         });
     }
     return dictionary;

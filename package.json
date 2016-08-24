@@ -1,7 +1,7 @@
 {
   "name": "frequence",
   "description": "frequency finder",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "@skoranga",
   "repository": {
     "type": "git",
@@ -11,6 +11,7 @@
   "publishConfig": {
     "registry": "http://registry.npmjs.com"
   },
+  "license": "MIT",
   "engines": {
     "node": ">= 4.4"
   },

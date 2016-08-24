@@ -21,20 +21,17 @@ describe('frequence', () => {
         let result = Frequence(['hello world', 'in new world']);
         Assert.ok(result);
         Assert.equal(Object.keys(result).length, 4);
-        Assert.equal(result.WORLD, 2);
     });
 
     it('letter', () => {
         let result = Frequence('hello world', {type: 'letter'});
         Assert.ok(result);
         Assert.equal(Object.keys(result).length, 7);
-        Assert.equal(result.L, 3);
     });
 
     it('letters fn', () => {
         let result = Frequence.letters('hello world');
         Assert.ok(result);
         Assert.equal(Object.keys(result).length, 7);
-        Assert.equal(result.L, 3);
     });
 });
