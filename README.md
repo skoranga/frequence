@@ -15,7 +15,9 @@ console.log(freq);
 
 API takes options as an optional 2nd argument.
 
+```
 options = {
     caseSensitive: false|true,      //default false
     keepSpecialChars: false|true    //default false
 }
+```
