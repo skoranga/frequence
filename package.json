@@ -13,16 +13,15 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">= 4.4"
+    "node": ">= 8"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "eslint": "^3",
-    "mocha": "^3"
+    "eslint": "^6",
+    "mocha": "^6"
   },
   "scripts": {
-    "lint": "eslint index.js lib test",
+    "lint": "eslint index.js test",
     "pretest": "npm run lint",
     "test": "mocha"
   }
